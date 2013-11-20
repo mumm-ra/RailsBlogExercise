@@ -2,14 +2,14 @@ Given(/^I am at the home page$/) do
   visit "/"
 end
 
-When(/^I press "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+When(/^I press "(.*?)"$/) do |link|
+  click_on(link)
 end
 
-When(/^I fill the "(.*?)" with "(.*?)"$/) do |arg1, arg2|
-  pending # express the regexp above with the code you wish you had
+When(/^I fill the "(.*?)" with "(.*?)"$/) do |textarea, content|
+  fill_in(textarea, :with => content)
 end
 
-Then(/^I should see "(.*?)"$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+Then(/^I should see "(.*?)"$/) do |content|
+  page.has_content?(content)
 end
