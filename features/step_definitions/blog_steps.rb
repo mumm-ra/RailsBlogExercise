@@ -17,3 +17,7 @@ end
 Given(/^I have a post$/) do
   FactoryGirl.create(:post)
 end
+
+And (/^I should not see "(.*?)"$/) do |content|
+  page.should_not have_content(content)
+end
