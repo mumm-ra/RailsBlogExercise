@@ -6,3 +6,4 @@ Step 3: Pass the first step from our feature.
 Step 4: Pass the rest steps from our feature.
 Step 5: Create a new feature about comments.
 Step 6: Make comments run.
+Step 7: Create a new feature about a property of the comments.

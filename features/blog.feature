@@ -17,3 +17,12 @@ Feature: Add posts
     And I press "Create Comment"
     Then I should see "My first comment"
     And I should see "My first post"
+
+  Scenario: Comments should be truncated if they are more than 30 chars long
+    Given I have a post
+    And I am at the home page
+    When I press "Show"
+    And I fill the "comment_body" with "The loooooooooooooooooooongest comment in the world"
+    And I press "Create Comment"
+    Then I should see "The loooooooooooooooooooongest"
+    And I should not see "comment in the world"
