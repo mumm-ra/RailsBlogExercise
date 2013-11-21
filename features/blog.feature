@@ -13,7 +13,7 @@ Feature: Add posts
     Given I have a post
     And I am at the home page
     When I press "Show"
-    And I press "Comment"
-    And I fill the "comment_content" with "My first comment"
+    And I fill the "comment_body" with "My first comment"
     And I press "Create Comment"
     Then I should see "My first comment"
+    And I should see "My first post"

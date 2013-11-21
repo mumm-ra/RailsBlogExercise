@@ -11,5 +11,9 @@ When(/^I fill the "(.*?)" with "(.*?)"$/) do |textarea, content|
 end
 
 Then(/^I should see "(.*?)"$/) do |content|
-  page.has_content?(content)
+  page.should have_content(content)
+end
+
+Given(/^I have a post$/) do
+  FactoryGirl.create(:post)
 end
